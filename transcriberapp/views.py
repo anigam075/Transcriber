@@ -4,3 +4,7 @@ from django.shortcuts import render, redirect
 
 def home_f(request):
     return render(request, 'index.html')
+
+
+def transcribe_f(request):
+    return render(request, 'about.html')
