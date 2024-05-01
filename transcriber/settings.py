@@ -49,6 +49,12 @@ INSTALLED_APPS = [
     'transcriberapp',
 ]
 
+# AUTHENTICATION_BACKENDS = (
+#         'django.contrib.auth.backends.ModelBackend',
+#     )
+
+# AUTH_USER_MODEL = 'transcriberapp.User_s'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

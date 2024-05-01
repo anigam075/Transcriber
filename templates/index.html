@@ -31,7 +31,7 @@
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="/">
             <img src="{% static 'images/logo.png' %}" alt="" />
             <span>
               Transcriber
@@ -47,19 +47,29 @@
                 <a class="nav-link" href=" ">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="get-started"> About</a>
+                <a class="nav-link" href="get-started"> Transcriber</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="work.html">Work </a>
+                <a class="nav-link" href="work">Work </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="category.html"> Category </a>
+                <a class="nav-link" href="category"> Category </a>
               </li>
             </ul>
             <div class="user_option">
-              <a href="">
+              <a href="login">
                 <span>
                   Login
+                </span>
+              </a>
+              <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+              </form>
+            </div>
+            <div class="user_option">
+              <a href="register">
+                <span>
+                  SignUp
                 </span>
               </a>
               <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
@@ -451,7 +461,7 @@
           <div class="info_logo">
             <img src="{% static 'images/logo.png' %}" alt="" />
             <span>
-              Spering
+              Transcriber
             </span>
           </div>
           <div class="social_box">
@@ -482,16 +492,16 @@
                 </h5>
                 <ul>
                   <li class=" active">
-                    <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="" href="/">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="">
-                    <a class="" href="about.html">About </a>
+                    <a class="" href="get-started">Transcriber </a>
                   </li>
                   <li class="">
-                    <a class="" href="work.html">Work </a>
+                    <a class="" href="work">Work </a>
                   </li>
                   <li class="">
-                    <a class="" href="category.html">Category </a>
+                    <a class="" href="category">Category </a>
                   </li>
                 </ul>
               </div>
