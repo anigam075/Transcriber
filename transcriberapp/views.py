@@ -30,8 +30,15 @@ def login_f(request):
         user = authenticate(email=email, password=password)
         if user:
             login(request, user)
+            print('user ------- ', user)
             return redirect('/') 
     return render(request, 'login1.html')
+
+def logout_f(request):
+    print('before logout ------ ',get_user(request))
+    logout(request)
+    print('after logout ------ ',get_user(request))
+    return redirect('/')
 
 def register(request):
     if request.method == 'POST':
