@@ -9,13 +9,14 @@ def home_f(request):
     return render(request, 'index.html')
 
 def transcribe_f(request):
-    return render(request, 'about.html')
+    return render(request, 'about1.html')
+
 
 def category_f(request):
-    return render(request, 'category.html')
+    return render(request, 'category1.html')
 
 def work_f(request):
-    return render(request, 'work.html')
+    return render(request, 'work1.html')
 
 def login_f(request):
     if request.method == 'POST':
@@ -30,7 +31,7 @@ def login_f(request):
         if user:
             login(request, user)
             return redirect('/') 
-    return render(request, 'login.html')
+    return render(request, 'login1.html')
 
 def register(request):
     if request.method == 'POST':
@@ -46,4 +47,4 @@ def register(request):
         user.save()
         print('registered')
         return redirect('login')
-    return render(request, 'register.html')
+    return render(request, 'register1.html')
