@@ -126,8 +126,8 @@
             </ul>
             <div class="user_option">
               
-              {% if user.get_user %}
-                <!-- Change 'Login' to 'Logout' when user is authenticated -->
+              {% if user.is_authenticated %}
+              <!-- <p>Welcome, {{ request.user.username }}!</p> -->
                 <a href="{% url 'logout' %}">
                   <span>
                     Logout
@@ -135,7 +135,7 @@
                 </a>
               {% else %}
                 <!-- Original 'Login' button -->
-                <a href="login">
+                <a href="{% url 'login' %}">
                   <span>
                     Login
                   </span>
@@ -143,10 +143,10 @@
               {% endif %}
             </div>
             <div class="user_option">
-              {% if user.get_user %}
+              {% if user.is_authenticated %}
                 <!-- Remove 'Sign Up' button when user is authenticated -->
               {% else %}
-                <a href="register">
+                <a href="{% url 'register' %}">
                   <span>
                     SignUp
                   </span>

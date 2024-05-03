@@ -23,3 +23,6 @@ def get_user(request):
         except User_s.DoesNotExist:
             pass
     return None
+
+def is_authenticated(request):
+    return get_user(request) is not None

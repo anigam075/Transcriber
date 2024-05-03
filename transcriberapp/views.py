@@ -3,14 +3,11 @@ from .models import User_s
 # from django.contrib.auth import login, authenticate
 from .auth import authenticate, login, logout, get_user
 
-# Create your views here.
-
 def home_f(request):
     return render(request, 'index.html')
 
 def transcribe_f(request):
     return render(request, 'about1.html')
-
 
 def category_f(request):
     return render(request, 'category1.html')
@@ -20,18 +17,14 @@ def work_f(request):
 
 def login_f(request):
     if request.method == 'POST':
-        #return all the emails and password present in the database
-        # emails = User_s.objects.values_list('email', flat=True)
-        # passwords = User_s.objects.values_list('password', flat=True)
-        # for email, password in zip(emails, passwords):
-        #     print(email, password)
         email = request.POST.get('email')
         password = request.POST.get('password')
         user = authenticate(email=email, password=password)
         if user:
             login(request, user)
             print('user ------- ', user)
-            return redirect('/') 
+            context = {'request': request}    
+            return redirect('/', context) 
     return render(request, 'login1.html')
 
 def logout_f(request):
